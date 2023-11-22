@@ -3,43 +3,33 @@ title: Gungnir
 SEOTitle: Jekyll theme Gungnir
 description: Jekyll version of the blog theme Gungnir.
 keyword: "jekyll, theme, blog, blog theme"
-url: "https://jekyll-theme-gungnir.vercel.app"      # your host, for absolute URL
-baseurl: ""                                         # for example, '/blog' if your blog hosted on 'host/blog'
-avatar: "img/header-avatar.jpeg"                    # the avatar showing on the homepage
-
+url: "https://spidychoi.github.io"
+baseurl: "/sori-cafe"
+avatar: "img/header-avatar.jpeg"
 
 # GitHub repository (if the site is hosted by GitHub)
-repository: Renovamen/jekyll-theme-gungnir
+repository: spidychoi/sori-cafe
 repository_branch: main
-
 
 # Theme style settings
 theme_style:
   highlight:    # "dark" (default), "light"
   alert:        # "flat" (default), "modern"
   post_preview: # "image" (default), "text"
-                # display post's featured image on homepage or not
-
 
 # Markdown enhancements settings
 math:
-  enable: true    # false (default), true
-                  # math rendering for all posts and keynotes
+  enable: true
   engine:         # "katex" (default), "mathjax"
-                  # only make sense when `math.engine: true`
-chart: true       # false (default), true
-mermaid: true     # false (default), true
-emoji-plus: true  # false (default), true
-
+chart: true
+mermaid: true
+emoji-plus: true
 
 # CDN settings
 cdn:
   source:       # "jsdelivr" (default), "bootcdn", "unpkg", "cdnjs"
   enable:       # false (default), true
-                # optimizing asset files via jsDelivr or not
 
-
-# Publish posts or collection documents with a future date.
 future: true
 
 collections:
@@ -50,22 +40,18 @@ collections:
   projects:
     output: true
 
-
 # SNS settings
 sns:
   RSS: true
-  github_username: Renovamen
+  github_username: spidychoi
   weibo_username:
-  zhihu_username: chao-neng-gui-su
-  twitter_username: renovamen_zxh
-  facebook_username: renovamen.zou
-  linkedin_username: xiaohan-zou-55bba0160
-  email_address: renovamenzxh@gmail.com
-
+  zhihu_username:
+  twitter_username:
+  facebook_username:
+  linkedin_username:
+  email_address:
 
 # Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-# highlighter: rouge
 permalink: pretty
 paginate: 10
 exclude:
@@ -78,25 +64,19 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - /node_modules
-anchorjs: true  # if you want to customize anchor. check out `anchor.html`
-# If you have timezone issue (e.g. #68) in China, uncomment to use this:
-# timezone: CN
-
+anchorjs: true
 
 # Gems
-# you have to `bundle config set path 'vendor/bundle' && bundle install` before local preview
 plugins:
   - jekyll-paginate
   - jemoji
 
-
 # Markdown settings
 markdown: kramdown
 kramdown:
-  input: GFM                       # use Github Flavored Markdown !important
+  input: GFM
   syntax_highlighter_opts:
-    disable: true                  # we use highlight.js for syntax highlighting, so we disable rouge here
-
+    disable: true
 
 # Navigation menu settings
 menus:
@@ -119,45 +99,33 @@ menus:
     font: fas fa-link
     url: /links/
 
-
 # Comment settings
 comment:
-  provider: gitalk # false (default), "disqus", "gitalk", "valine"
+  provider: gitalk
 
   # Disqus settings
-  disqus_username: renovamen
+  disqus_username: spidychoi
 
   # Gitalk settings
-  # https://github.com/gitalk/gitalk
   gitalk:
-    clientID: 'faf464da633b08ff5317'
-    clientSecret: '402324fc860894e5fcba6320fddbddd1ec7f5644'
-    repo: gitalk-comments
-    owner: This-is-an-Apple
+    clientID: 'YOUR_GITHUB_CLIENT_ID'
+    clientSecret: 'YOUR_GITHUB_CLIENT_SECRET'
+    repo: 'YOUR_GITHUB_REPOSITORY_FOR_COMMENTS'
+    owner: spidychoi
     admin:
-      - Renovamen
-      - This-is-an-Apple
+      - spidychoi
 
   # Valine settings
-  # https://valine.js.org/
   valine:
     appID:
     appKey:
 
-
 # Analytics settings
 analytics:
-  # Baidu Analytics
-  ba_track_id: 00504d7a0bf51278aa92b36e60e830b5 # [your baidu track id]
-
-  # Google Analytics
-  ga_track_id: 'G-ZYM02DSEHS'               # [your google track id]
-
+  ba_track_id: 00504d7a0bf51278aa92b36e60e830b5
+  ga_track_id: 'G-ZYM02DSEHS'
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
 service-worker: true
-
-
-# Whether or not to enable Hitokoto (the bubble on homepage)
-hitokoto: true # default: false
+hitokoto: true
